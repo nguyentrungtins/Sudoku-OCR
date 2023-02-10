@@ -117,7 +117,7 @@ def niceSudo(board):
         lines.append([line2,line3,line4][(r%side==0)+(r%base==0)])
     lines.append(coord)
     print(*lines,sep="\n")
-    with open('results.txt', 'a', encoding='utf-8') as f:
+    with open('results.txt', 'w', encoding='utf-8') as f:
         f.write('\n'.join(lines))
 niceSudo(board)
 cv2.imshow('Result', image)

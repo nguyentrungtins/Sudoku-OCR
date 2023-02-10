@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-path = r'./sudoku2.jpg'
+path = r'./sudoku.jpg'
 def perspective_transform(image, corners):
     def order_corner_points(corners):
         # Separate corners into individual points
