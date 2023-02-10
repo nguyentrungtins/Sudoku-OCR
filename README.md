@@ -19,7 +19,18 @@ Smart Sudoku Number Detection that tries to extract a sudoku board from a photo 
 
 Note: You can install one of the following methods below:
 
-### Method 1: Installation with virtualenv (Recommended)
+### Method 1: Run directly from root directory
+
+1. Run board.py file to crop board image:
+   ```bash
+   python3 board.py
+   ```
+2. Run run.py file to detected number from image:
+   ```bash
+   python3 run.py
+   ```
+
+### Method 2: Installation with virtualenv (Recommended)
 
 1. I recommend using [virtualenv](https://virtualenv.pypa.io/en/latest/). Download virtualenv by opening a terminal and typing:
    ```bash
@@ -62,13 +73,4 @@ Note: You can install one of the following methods below:
    python3 run.py
    ```
 
-### Method 2: Run directly from root directory
 
-1. Run board.py file to crop board image:
-   ```bash
-   python3 board.py
-   ```
-2. Run run.py file to detected number from image:
-   ```bash
-   python3 run.py
-   ```
