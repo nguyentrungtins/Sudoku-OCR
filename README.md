@@ -62,7 +62,7 @@ Note: You can install one of the following methods below:
    python3 run.py
    ```
 
-### Method 2: Run directly from root directory (Recommended)
+### Method 2: Run directly from root directory
 
 1. Run board.py file to crop board image:
    ```bash
