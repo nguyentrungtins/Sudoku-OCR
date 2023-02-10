@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 
+path = r'./sudoku2.jpg'
 def perspective_transform(image, corners):
     def order_corner_points(corners):
         # Separate corners into individual points
@@ -42,7 +43,7 @@ def perspective_transform(image, corners):
     # Return the transformed image
     return cv2.warpPerspective(image, matrix, (width, height))
 
-image = cv2.imread('./sudoku2.jpg')
+image = cv2.imread(path)
 original = image.copy()
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 blur = cv2.medianBlur(gray, 3)
