@@ -42,7 +42,7 @@ def perspective_transform(image, corners):
     # Return the transformed image
     return cv2.warpPerspective(image, matrix, (width, height))
 
-image = cv2.imread('./sudoku.jpg')
+image = cv2.imread('./sudoku2.jpg')
 original = image.copy()
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 blur = cv2.medianBlur(gray, 3)
@@ -60,16 +60,12 @@ for c in cnts:
 
 
 # percent of original size
- 
-print(transformed.shape[0], transformed.shape[1])
-width = 500 
-scale_percent = float(width / transformed.shape[1])
-print(scale_percent)
-height = int(transformed.shape[0] * scale_percent)
-dim = (width, height)
-print(dim)
-resized = cv2.resize(transformed, dim, interpolation = cv2.INTER_AREA)
-cv2.imshow('transformed', resized)
-cv2.imwrite('board3.png', resized)
-cv2.imwrite('board2.png', transformed)
+if (transformed.shape[1] < 500): 
+    width = 500 
+    scale_percent = float(width / transformed.shape[1])
+    height = int(transformed.shape[0] * scale_percent)
+    dim = (width, height)
+    transformed = cv2.resize(transformed, dim, interpolation = cv2.INTER_AREA)
+cv2.imshow('transformed', transformed)
+cv2.imwrite('board.png', transformed)
 cv2.waitKey()

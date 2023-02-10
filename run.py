@@ -3,7 +3,7 @@ from imutils import contours
 import numpy as np
 
 # Load image, grayscale, and adaptive threshold
-image = cv2.imread('./board2.png')
+image = cv2.imread('./board.png')
 cv2.imshow("raw", image)
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 thresh = cv2.adaptiveThreshold(gray,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV,57,5)
